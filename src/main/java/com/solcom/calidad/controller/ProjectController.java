@@ -7,8 +7,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
 
 
 import com.sforce.soap.partner.PartnerConnection;
@@ -58,6 +60,29 @@ public class ProjectController {
 		model.addAttribute("projects", myListOfProjects);
 		
 		return "project_list";
+	}
+	
+	@RequestMapping(value="/project/", method=RequestMethod.POST)
+	public String update(ModelAndView mv, @ModelAttribute("project") SObject project) {
+	    	
+		logger.info("updating /project");
+		
+		PartnerConnection connection =  ConnectionManager.getConnectionManager().getConnection();
+				
+		try {
+			
+			SObject projectToCreate = new SObject();
+			projectToCreate.setType("Desarrollo__c");
+			
+			SObject[] projects = {projectToCreate};
+			connection.create(projects);
+
+		} catch (ConnectionException e) {
+			logger.error("ConnectionException  : " + e);
+			e.printStackTrace();
+		}	
+	    	
+		return "redirect:/project/";
 	}
 
 }

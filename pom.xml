@@ -123,28 +123,33 @@
 		</dependency>
 
 		<!-- Security -->
+		<!--
 		<dependency>
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-core</artifactId>
 			<version>${org.springframework-version}</version>
 			<scope>compile</scope>
 		</dependency>
+		
 		<dependency>
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-web</artifactId>
 			<version>${org.springframework-version}</version>
 			<scope>compile</scope>
 		</dependency>
+		
 		<dependency>
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-config</artifactId>
 			<version>${org.springframework-version}</version>
 		</dependency>
+		
 		<dependency>
 			<groupId>com.force.sdk</groupId>
 			<artifactId>force-springsecurity</artifactId>
 			<version>${force.sdk.version}</version>
 		</dependency>
+		-->
 
 		<!-- AspectJ -->
 		<dependency>
@@ -160,6 +165,8 @@
 			<artifactId>force-jpa</artifactId>
 			<version>${force.sdk.version}</version>
 		</dependency>
+		
+		<!--
 		<dependency>
 			<groupId>org.datanucleus</groupId>
 			<artifactId>datanucleus-core</artifactId>
@@ -172,6 +179,7 @@
 			<version>2.1.7</version>
 			<scope>runtime</scope>
 		</dependency>
+		-->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-tx</artifactId>
@@ -192,14 +200,14 @@
 		</dependency>
 	</dependencies>
 
-
+	<!--  
 	<pluginRepositories>
 		<pluginRepository>
 			<id>DataNucleus_2</id>
 			<url>http://www.datanucleus.org/downloads/maven2/</url>
 		</pluginRepository>
 	</pluginRepositories>
-
+	-->
 	<build>
 
 		<plugins>
@@ -226,6 +234,7 @@
 					</execution>
 				</executions>
 			</plugin>
+			<!-- 
 			<plugin>
 				<groupId>org.datanucleus</groupId>
 				<artifactId>maven-datanucleus-plugin</artifactId>
@@ -273,6 +282,7 @@
 					</execution>
 				</executions>
 			</plugin>
+			 -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-dependency-plugin</artifactId>

@@ -14,5 +14,14 @@
 				${ p.id }
 	
 		</c:forEach>
+		
+		
+		<form:form commandName="project">
+		
+			<input type="submit" value="Save"/>
+		</form:form>
+		
 	</jsp:body>
+	
+	
 </tags:template>

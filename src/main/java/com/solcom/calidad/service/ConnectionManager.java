@@ -18,8 +18,8 @@ public class ConnectionManager {
 	
 	
 	//TODO - Sacar estas credenciales a un archivo de Configuracion
-	private static final String username = "admin@urbicalidad.com";
-	private static final String password = "urbicrm1pKMZQWwjhlv0F4ctHyMP3tVyQ";
+	private static final String username = "pedro.jauregui@db.com";
+	private static final String password = "database1f1pmDDOowW1c24lhFnMLg3tx";
 	
 	//TODO - invertigar como implementar Oauth en lugar del login normal. 
 	
